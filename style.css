@@ -179,37 +179,3 @@ aside
 
 
 
-
-
-
-
-/*
-.container .box:after
-{
-    content: '';
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    width: 80px;
-    height: 80px;
-    background: url('assets/images/quote.jpg');
-    background-size: cover;
-    opacity: 0.05;
-    pointer-events: none;
-    transition: 0.5s;
-    transform: rotate(180deg) translateY(0px);
-}
-.container .box:hover:after
-{
-    opacity: 1;
-    transform: rotate(180deg) translateY(-60px);
-}
-p#text{
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 50px;
-    font-size: 20px;
-    color: black;
-    border-left: 10px solid rgba(0, 214, 170, 0.8);
-    background-color: whitesmoke;
-}*/
