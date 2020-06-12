@@ -1,0 +1,215 @@
+body{
+    background-color: #f6f5f5;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    width: 100%;
+}
+
+.box p{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.container{
+    width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
+
+.container .box{
+    position: relative;
+    padding: 80px 40px 40px;
+    transition: 0.5s;
+    text-align: center;
+    background: rgba(0, 214, 170, 1);
+}
+
+.container .box:hover{
+    background: #ffffff;
+}
+
+.container .box p{
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 0;
+    transition: 0.5s;
+}
+
+
+.container .box h4{
+    margin: 20px 0 0;
+    padding: 0;
+    transition: 0.5s;
+    font-size: 18px;
+    color: #3b648a;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.container .box h4 span{
+    font-weight: 600;
+    font-size: 14px;
+    color: #c5c5c5;
+    transition: 0.5s;
+}
+
+.container .box:hover p, .container .box:hover h4, .container .box:hover h4 span{
+    color: #3b648a;
+
+}
+.imgBox img{
+    border-radius: 50%;
+}
+.container .box .imgBox{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+}
+.container .box:before
+{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    opacity: 0.05;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.container .box:hover:before
+{
+    opacity: 1;
+    transform: translateY(-60px);
+}
+
+aside
+{
+    width: 35%;
+    float: right;
+    text-align: center;
+    border-left: 5px solid rgba(0, 214, 170, 1);
+    height: 500px;
+    padding: 18px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+
+.repository
+{   
+    width: 40%;
+    float: left;
+    border-radius: 5px;
+    text-align: left;
+    margin: auto;
+    margin-left: 50px;
+    padding: 12px;
+    height:500px;
+    padding: 18px;
+    border-left: 5px solid rgba(0, 214, 170, 1);
+    float: left;
+    margin-bottom: 20px;
+
+   
+}
+
+
+
+/* Media Query */
+
+@media screen and (max-width: 768px) 
+{
+
+    .container
+    {
+        width: auto;
+    }
+
+    .repository
+    {
+        text-align: center;
+        width: 80%;
+        margin: auto 5%;
+        height: auto;
+        margin-bottom: 30px;
+    }   
+
+    aside
+    {
+        width: 80%;
+        margin: auto 10%;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .repository
+    {
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    aside
+    {
+        margin: auto;
+        float: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*
+.container .box:after
+{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+    background: url('assets/images/quote.jpg');
+    background-size: cover;
+    opacity: 0.05;
+    pointer-events: none;
+    transition: 0.5s;
+    transform: rotate(180deg) translateY(0px);
+}
+.container .box:hover:after
+{
+    opacity: 1;
+    transform: rotate(180deg) translateY(-60px);
+}
+p#text{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: black;
+    border-left: 10px solid rgba(0, 214, 170, 0.8);
+    background-color: whitesmoke;
+}*/

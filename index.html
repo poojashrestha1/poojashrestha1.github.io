@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pooja Shrestha</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <div class="container">
+            <div class="box">
+                <div class="imgBox">
+                    <img id="profileImage"height="100px" width="100px">
+                </div>
+                <p id="bio"></p>
+                <h4 id="userName"></h4>
+            </div>
+        </div>
+    </section>
+
+   
+        <div class="repository">
+            <h2>My Repositories in Github</h2>
+            <ul>
+                <div id="myRepos"></div>
+            </ul>
+        </div>
+   
+
+    <aside>
+            <a class="twitter-timeline" data-width="350" data-height="500" href="https://twitter.com/poosmiles1?ref_src=twsrc%5Etfw">Tweets by poosmiles1</a> 
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </aside>
+
+    
+
+    <script>
+        fetch("https://api.github.com/users/poojashrestha1")
+        .then(response => response.json())
+        .then(function(data)
+        {
+            console.log(data)
+
+            document.getElementById("profileImage").src = data['avatar_url']
+            document.getElementById("userName").textContent = data['login']
+            document.getElementById("bio").textContent = data['bio']
+            document.getElementById("idLink").href = data['html_url']
+
+            document.getElementById("mainContainer").hidden = false
+            document.getElementById("loading").hidden = true
+
+
+        })
+
+        
+     fetch("https://api.github.com/users/poojashrestha1/repos")
+    .then(response => response.json())
+    .then(function(data){
+        var repositoryList = document.getElementById('myRepos');
+        var repoName = ''
+        data.forEach(Element => {
+            repoName += Element['name'] + '<br/>'
+            
+        });
+        repositoryList.innerHTML = repoName;
+
+    })
+
+        
+    </script>
+</body>
+</html>
